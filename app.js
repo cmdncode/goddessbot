@@ -26,7 +26,7 @@ function respond (){
         T.post('favorites/create', id, function(err, response){
           // If the favorite fails, log the error message
           if(err){
-            console.log(err[0].message);
+            console.log('favorite error');
           }
           // If the favorite is successful, log the url of the tweet
           else{
