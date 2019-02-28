@@ -14,7 +14,7 @@ var params = {
 
 function respond (){
   // Initiate your search using the above paramaters
-  T.get('search/tweets', params, function(err, data, response) {
+  T.get('search/tweets' + params, function(err, data, response) {
     // If there is no error, proceed
     if(!err){
       // Loop through the returned tweets
