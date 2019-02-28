@@ -23,10 +23,10 @@ function respond (){
         // Get the tweet Id from the returned data
         let id = { id: data.statuses[i].id_str }
         // Try to Favorite the selected Tweet
-        T.post('favorites/create', id, function(err, response){
+        T.post('favorites/create', id, function(err, data, response){
           // If the favorite fails, log the error message
           if(err){
-            console.log('error favoriting');
+            console.log('error favoriting' + data);
           }
           // If the favorite is successful, log the url of the tweet
           else{
