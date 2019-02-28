@@ -2,9 +2,7 @@ var Twitter = require('twitter');
 var config = require('./config.js');
 var T = new Twitter(config);
 
-server.listen(config.port, function () {
-  console.log('Server listening on %d, in %s mode', config.port, app.get('env'));
-});
+
 
 // Set up your search parameters
 var params = {
