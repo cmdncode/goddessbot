@@ -107,7 +107,7 @@ setInterval(function(){
 retweet();
 
 setInterval(function(){
-  respond()}, 60000)
+  respond()}, 81000)
 respond();
 
 
