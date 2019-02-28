@@ -14,7 +14,7 @@ var params = {
 
 function respond (){
   // Initiate your search using the above paramaters
-  T.get('search/tweets' + params, function(err, data, response) {
+  T.get('search/tweets', params, function(err, data, response) {
     // If there is no error, proceed
     if(!err){
       // Loop through the returned tweets
@@ -23,10 +23,10 @@ function respond (){
         // Get the tweet Id from the returned data
         let id = { id: data.statuses[i].id_str }
         // Try to Favorite the selected Tweet
-        T.post('favorites/create', id, function(err, data, response){
+        T.post('favorites/create', id, function(err, response){
           // If the favorite fails, log the error message
           if(err){
-            console.log('error favoriting' + data);
+            console.log(err[0].message);
           }
           // If the favorite is successful, log the url of the tweet
           else{
@@ -107,7 +107,7 @@ setInterval(function(){
 retweet();
 
 setInterval(function(){
-  respond()}, 81000)
+  respond()}, 60000)
 respond();
 
 
