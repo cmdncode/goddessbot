@@ -103,11 +103,11 @@ function retweet (){
 }
 
 setInterval(function(){
-  retweet()}, 60000)
+  retweet()}, 180000)
 retweet();
 
 setInterval(function(){
-  favorite()}, 60000)
+  favorite()}, 180000)
 favorite();
 
 
