@@ -12,7 +12,7 @@ var params = {
   lang: 'en'
 }
 
-function respond (){
+function favorite (){
   // Initiate your search using the above paramaters
   T.get('search/tweets', params, function(err, data, response) {
     // If there is no error, proceed
@@ -107,8 +107,8 @@ setInterval(function(){
 retweet();
 
 setInterval(function(){
-  respond()}, 60000)
-respond();
+  favorite()}, 60000)
+favorite();
 
 
 
