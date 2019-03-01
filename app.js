@@ -35,21 +35,6 @@ function favorite (){
             console.log('Favorited: ', `https://twitter.com/${username}/status/${tweetId}`)
           }
         });
-        
-        // T.post('statuses/retweet/' + tweetId, function(error, tweet, response) {
-         
-        //   if (!error) {
-        //     console.log(tweet);
-        //   }
-        //   else{
-        //     let username = response.user.screen_name;
-        //     let tweetId = response.id_str;
-        //     console.log('retweeted: ', `https://twitter.com/${username}/status/${tweetId}`)
-        //   }
-        // });
-          // If the favorite is successful, log the url of the tweet
-          
-        
       }
     } else {
       console.log(err);
@@ -80,21 +65,6 @@ function retweet (){
             console.log('retweeted: ', `https://twitter.com/${username}/status/${tweetId}`)
           }
         });
-        
-        // T.post('statuses/retweet/' + tweetId, function(error, tweet, response) {
-         
-        //   if (!error) {
-        //     console.log(tweet);
-        //   }
-        //   else{
-        //     let username = response.user.screen_name;
-        //     let tweetId = response.id_str;
-        //     console.log('retweeted: ', `https://twitter.com/${username}/status/${tweetId}`)
-        //   }
-        // });
-          // If the favorite is successful, log the url of the tweet
-          
-        
       }
     } else {
       console.log(err);
@@ -109,28 +79,3 @@ retweet();
 setInterval(function(){
   favorite()}, 180000)
 favorite();
-
-
-
-
-
-// client.post('statuses/retweet/' + tweetId, function(error, tweet, response) {
-//   if (!error) {
-//     console.log(tweet);
-//   }
-// });
-
-
-// let tweetid = { id: data.statuses[i].id_str }
-//         T.post('statuses/retweet', tweetid, function(err, response){
-//           // If the rt fails, log the error message
-//           if(err){
-//             console.log(err[0].message);
-//           }
-//           // If the rt is successful, log the url of the tweet
-//           else{
-//             let username = response.user.screen_name;
-//             let tweetId = response.id_str;
-//             console.log('Favorited: ', `https://twitter.com/${username}/status/${tweetId}`)
-//           }
-//         });
